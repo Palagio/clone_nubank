@@ -4,7 +4,7 @@ class AppBarWidget extends AppBar {
   AppBarWidget({Key? key, double elevation = 0})
       : super(
             key: key,
-            backgroundColor: Colors.purple,
+            backgroundColor: const Color(0xFF9c44dc),
             elevation: elevation,
             leading: IconButton(
               iconSize: 30,
