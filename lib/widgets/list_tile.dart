@@ -23,7 +23,7 @@ class ListTileWidget extends StatelessWidget {
                   height: 70,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(150),
-                    color: const Color(0xFFD3D3D3),
+                    color: const Color(0xFFDCDCDC),
                   ),
                   child: Icon(icon),
                 ),

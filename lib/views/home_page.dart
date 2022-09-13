@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:primeiro_projeto/app_bar.dart';
-import 'package:primeiro_projeto/list_tile.dart';
-import 'package:primeiro_projeto/list_tile_news.dart';
+import 'package:primeiro_projeto/widgets/app_bar.dart';
+import 'package:primeiro_projeto/widgets/list_tile.dart';
+import 'package:primeiro_projeto/widgets/list_tile_news.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -92,7 +92,7 @@ class HomePage extends StatelessWidget {
               ),
               SizedBox(
                 height: 150,
-                width: MediaQuery.of(context).size.width * 0.90,
+                width: MediaQuery.of(context).size.width,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: const [
@@ -113,21 +113,21 @@ class HomePage extends StatelessWidget {
                       icon: Icons.abc_rounded,
                     ),
                     ListTileWidget(
-                      label: "Recarga de\n\n" "celular\n\n",
+                      label: "Recarga de\n" "celular\n\n",
                       icon: Icons.settings_cell,
                     ),
                   ],
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 10,
               ),
               Container(
-                width: MediaQuery.of(context).size.width * 0.90,
+                width: MediaQuery.of(context).size.width * 0.95,
                 height: 55,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
-                  color: const Color(0xFFD3D3D3),
+                  color: const Color(0xFFDCDCDC),
                 ),
                 child: Stack(
                   children: const [
@@ -153,27 +153,40 @@ class HomePage extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
-              SizedBox(
-                height: 100,
-                width: MediaQuery.of(context).size.width * 0.90,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: const [
-                    ListTileNews(
-                      label: 'Voce na Copa do Mundo da Fifa. Acredita e vai.',
-                      color: Colors.black,
-                    ),
-                    ListTileNews(
-                      label:
-                          'Seguro de vida a partir de R\$4/mes? Conheca o nubank vida!',
-                      color: Colors.black,
-                    ),
-                    ListTileNews(
-                      label:
-                          'Salve um amigo da burocracia. Faca um convite para o Nubank',
-                      color: Colors.black,
-                    ),
-                  ],
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SizedBox(
+                  height: 100,
+                  width: MediaQuery.of(context).size.width,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: const [
+                      ListTileNews(
+                        label: 'Você pediu elas chegaram: ',
+                        color: Colors.purple,
+                        label2: 'conheça as Caixinhas!',
+                        color2: Colors.black,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      ListTileNews(
+                        label: 'Seguro de vida a partir de R\$4/mes? ',
+                        color: Colors.black,
+                        label2: 'Conheça o nubank vida!',
+                        color2: Colors.purple,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      ListTileNews(
+                        label: 'Salve um amigo da burocracia. ',
+                        color: Colors.black,
+                        label2: 'Faça um convite para o Nubank',
+                        color2: Colors.purple,
+                      ),
+                    ],
+                  ),
                 ),
               ),
               const SizedBox(
