@@ -12,27 +12,35 @@ class ListTileWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: InkWell(
-            onTap: onPressed,
-            child: Container(
-              width: 60,
-              height: 60,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(150),
-                color: const Color(0xFFD3D3D3),
+        Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: InkWell(
+                onTap: onPressed,
+                child: Container(
+                  width: 70,
+                  height: 70,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(150),
+                    color: const Color(0xFFD3D3D3),
+                  ),
+                  child: Icon(icon),
+                ),
               ),
-              child: Icon(icon),
             ),
-          ),
+            Expanded(
+              child: Text(
+                label,
+                maxLines: 3,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ),
+          ],
         ),
-        Positioned(
-            top: 70,
-            child: Text(
-              label,
-              textAlign: TextAlign.center,
-            )),
       ],
     );
   }

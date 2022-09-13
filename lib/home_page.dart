@@ -1,6 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:primeiro_projeto/app_bar.dart';
 import 'package:primeiro_projeto/list_tile.dart';
+import 'package:primeiro_projeto/list_tile_news.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -86,26 +88,43 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 30,
               ),
               SizedBox(
-                height: 100,
+                height: 150,
+                width: MediaQuery.of(context).size.width * 0.90,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: const [
-                    ListTileWidget(label: 'Area Pix', icon: Icons.abc_rounded),
-                    ListTileWidget(label: 'Pagar', icon: Icons.abc_rounded),
                     ListTileWidget(
-                        label: 'Transferir', icon: Icons.abc_rounded),
-                    ListTileWidget(label: 'Depositar', icon: Icons.abc_rounded),
+                      label: 'Area Pix',
+                      icon: Icons.abc_rounded,
+                    ),
                     ListTileWidget(
-                        label: 'Recarga de celular', icon: Icons.abc_rounded),
+                      label: 'Pagar',
+                      icon: CupertinoIcons.barcode,
+                    ),
+                    ListTileWidget(
+                      label: 'Transferir',
+                      icon: CupertinoIcons.money_dollar,
+                    ),
+                    ListTileWidget(
+                      label: 'Depositar',
+                      icon: Icons.abc_rounded,
+                    ),
+                    ListTileWidget(
+                      label: "Recarga de\n\n" "celular\n\n",
+                      icon: Icons.settings_cell,
+                    ),
                   ],
                 ),
               ),
+              const SizedBox(
+                height: 20,
+              ),
               Container(
                 width: MediaQuery.of(context).size.width * 0.90,
-                height: 50,
+                height: 55,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   color: const Color(0xFFD3D3D3),
@@ -131,13 +150,47 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
+              const SizedBox(
+                height: 15,
+              ),
+              SizedBox(
+                height: 100,
+                width: MediaQuery.of(context).size.width * 0.90,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: const [
+                    ListTileNews(
+                      label: 'Voce na Copa do Mundo da Fifa. Acredita e vai.',
+                      color: Colors.black,
+                    ),
+                    ListTileNews(
+                      label:
+                          'Seguro de vida a partir de R\$4/mes? Conheca o nubank vida!',
+                      color: Colors.black,
+                    ),
+                    ListTileNews(
+                      label:
+                          'Salve um amigo da burocracia. Faca um convite para o Nubank',
+                      color: Colors.black,
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: 1,
+                color: const Color(0xFFD3D3D3),
+              ),
               InkWell(
                 onTap: () {},
                 child: SizedBox(
                   width: MediaQuery.of(context).size.width,
-                  height: 150,
-                  child: Stack(children: const [
-                    Positioned(
+                  height: 190,
+                  child: Stack(children: [
+                    const Positioned(
                       top: 20,
                       left: 20,
                       child: Text(
@@ -145,7 +198,7 @@ class HomePage extends StatelessWidget {
                         style: TextStyle(fontSize: 18),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                       top: 50,
                       left: 20,
                       child: Text(
@@ -153,7 +206,7 @@ class HomePage extends StatelessWidget {
                         style: TextStyle(fontSize: 14),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                       top: 70,
                       left: 20,
                       child: Text(
@@ -164,7 +217,7 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                       top: 100,
                       left: 20,
                       child: Text(
@@ -172,7 +225,7 @@ class HomePage extends StatelessWidget {
                         style: TextStyle(fontSize: 14),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                       left: 380,
                       top: 20,
                       child: Icon(
@@ -180,8 +233,34 @@ class HomePage extends StatelessWidget {
                         size: 15,
                       ),
                     ),
+                    Positioned(
+                      top: 120,
+                      child: Padding(
+                        padding: const EdgeInsets.only(
+                            left: 15, top: 15, bottom: 10),
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          style: ButtonStyle(
+                              elevation: MaterialStateProperty.all(0),
+                              shape: MaterialStateProperty.all(
+                                  const StadiumBorder()),
+                              backgroundColor: MaterialStateProperty.all(
+                                const Color(0xFFDCDCDC),
+                              )),
+                          child: const Text(
+                            'Parcelar compras',
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        ),
+                      ),
+                    )
                   ]),
                 ),
+              ),
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: 1,
+                color: const Color(0xFFD3D3D3),
               ),
             ],
           ),
