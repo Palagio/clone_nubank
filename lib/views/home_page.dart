@@ -1,17 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:primeiro_projeto/widgets/app_bar.dart';
 import 'package:primeiro_projeto/widgets/list_tile.dart';
 import 'package:primeiro_projeto/widgets/list_tile_news.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBarWidget(),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -278,20 +281,6 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
-        bottomNavigationBar: BottomNavigationBar(iconSize: 30, items: const [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.swap_vert_rounded),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.attach_money_rounded),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_basket_rounded),
-            label: '',
-          ),
-        ]),
       ),
     );
   }
