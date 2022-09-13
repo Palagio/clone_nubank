@@ -66,7 +66,7 @@ class HomePage extends StatelessWidget {
                         child: Padding(
                           padding: EdgeInsets.all(8.0),
                           child: Text(
-                            'R\$ 100,00',
+                            'R\$ 3232,50',
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 20,
@@ -97,7 +97,7 @@ class HomePage extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   children: const [
                     ListTileWidget(
-                      label: 'Area Pix',
+                      label: 'Área Pix',
                       icon: Icons.abc_rounded,
                     ),
                     ListTileWidget(
@@ -135,7 +135,7 @@ class HomePage extends StatelessWidget {
                       left: 50,
                       top: 15,
                       child: Text(
-                        'Meus cartoes',
+                        'Meus cartões',
                         style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.w500,
@@ -207,7 +207,7 @@ class HomePage extends StatelessWidget {
                       top: 20,
                       left: 20,
                       child: Text(
-                        'Cartao de Credito',
+                        'Cartão de Crédito',
                         style: TextStyle(fontSize: 18),
                       ),
                     ),
@@ -223,7 +223,7 @@ class HomePage extends StatelessWidget {
                       top: 70,
                       left: 20,
                       child: Text(
-                        'R\$ 250,00',
+                        'R\$ 253,00',
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w500,
@@ -234,7 +234,7 @@ class HomePage extends StatelessWidget {
                       top: 100,
                       left: 20,
                       child: Text(
-                        'Limite disponivel de R\$ 10,00',
+                        'Limite disponivel de R\$ 1351,20',
                         style: TextStyle(fontSize: 14),
                       ),
                     ),
